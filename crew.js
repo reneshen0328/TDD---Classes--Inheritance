@@ -1,3 +1,4 @@
+const Passenger = require("./passenger")
 const Person = require("./person")
 
 class Crew extends Person {
@@ -20,6 +21,10 @@ class GroundCrew extends Crew {
     constructor(name,role,type){
         super(name,role)
         this.type = "Ground Team"
+    }
+
+    luggage(){
+        return `Handle ${Passenger.name} luggage`
     }
 }
 
